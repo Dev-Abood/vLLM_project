@@ -10,4 +10,4 @@ RUN pip3 install --upgrade pip && pip3 install vllm
 EXPOSE 8000
 
 # Command to run vLLM
-CMD ["vllm", "serve", "Qwen/Qwen2.5-Coder-0.5B-Instruct", "--trust-remote-code", "--served-model-name", "qwen-chat", "--gpu-memory-utilization", "0.85"]
+CMD ["vllm", "serve", "Qwen/Qwen2.5-Coder-0.5B-Instruct", "--trust-remote-code", "--served-model-name", "qwen-chat", "--gpu-memory-utilization", "0.85", "--device", "cpu"]
